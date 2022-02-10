@@ -1,6 +1,6 @@
 body {
     background-color: #EBEBEB;
-    font-family: sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Droid Sans", "Helvetica Neue", "Fira Sans", sans-serif;
     margin: 0 auto;
 }
 @keyframes animatedBackground {
@@ -22,9 +22,9 @@ body {
     // text-shadow: 8px 8px 0 #1FB7B8;
     // text-shadow: 8px 8px 0 #AB82FA;
     // text-shadow: 8px 8px 0 #302CCB;
-    font-family: 'Arial Black'; 
+    font-family: 'Arial Black', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Droid Sans", "Helvetica Neue", "Fira Sans", sans-serif; 
     text-transform: uppercase;
-    background: #34C3CB url('images/90s/bg-pattern-2.jpg') repeat; 
+    background: #34C3CB url('https://github.com/landonkd/logo-drawing-game/raw/main/images/90s/bg-pattern-2.jpg') repeat; 
     background-position: 0 0;
     /*adjust s value for speed*/
     animation: animatedBackground 50s linear infinite;
@@ -112,6 +112,7 @@ button {
     img {
         display: none;
         max-width: 50%;
+        max-height: 50%;
     }
     &.active {
         img {
