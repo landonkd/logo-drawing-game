@@ -112,8 +112,8 @@ button {
     }
     img {
         display: none;
-        max-width: 50%;
-        max-height: 50%;
+        max-width: 60%;
+        max-height: 60%;
     }
     &.active {
         img {
@@ -255,10 +255,19 @@ footer {
 }
 #set-3 {
     .hex {
-        background: #991e66;
+        background: #DF2E1E;
     }
     .hex2 {
-        background: #da291c;
+        background: #00752F;
+    }
+    .hex3 {
+        background: #B4CE23;
+    }
+    .hex4 {
+        background: #F7A60E;
+    }
+    .hex5 {
+        background: #FAD107;
     }
 }
 #set-4 {

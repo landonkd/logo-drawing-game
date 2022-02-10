@@ -159,8 +159,8 @@ button:hover, button:focus {
 
 .real-logo img {
   display: none;
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 60%;
+  max-height: 60%;
 }
 
 .real-logo.active img {
@@ -371,11 +371,23 @@ footer {
 }
 
 #set-3 .hex {
-  background: #991e66;
+  background: #DF2E1E;
 }
 
 #set-3 .hex2 {
-  background: #da291c;
+  background: #00752F;
+}
+
+#set-3 .hex3 {
+  background: #B4CE23;
+}
+
+#set-3 .hex4 {
+  background: #F7A60E;
+}
+
+#set-3 .hex5 {
+  background: #FAD107;
 }
 
 #set-4 .hex {

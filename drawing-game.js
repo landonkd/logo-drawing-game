@@ -65,8 +65,8 @@ function draw(e) {
         case 1: // Ivy Group old
             hexArray = ['#1A8C7E'];
             break;
-        case 2: // Global Alliance
-            hexArray = ['#991e66', '#da291c'];
+        case 2: // Virginia Flavor
+            hexArray = ['#DF2E1E', '#00752F', '#B4CE23', '#F7A60E', '#FAD107'];
             break;
         case 3: // Carter Mountain
             hexArray = ['#006B35', '#78BE20'];
