@@ -108,6 +108,7 @@ section .section__inner-container > div {
 button {
   background: white;
   border: 2px solid white;
+  font-size: 14px;
   font-weight: bold;
   padding: 6px 12px;
   border-radius: 4px;
@@ -225,15 +226,15 @@ header, footer {
   margin: 0 auto;
   display: block;
   clear: both;
-  font-size: 14px;
+  font-size: 16px;
   color: blue;
-  font-weight: 400;
-  font-family: 'Arial Black';
+  font-weight: 700;
 }
 
 footer {
   margin-top: 128px;
   color: black;
+  font-size: 14px;
 }
 
 @-webkit-keyframes bounce {
