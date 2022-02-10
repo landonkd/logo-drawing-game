@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>🎨 Logo Drawing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>🎨 Can you draw these logos from memory??</header>
+<section id="set-1">
+    <h2>1. Draw the new Ivy Group logo</h2>
+    <div class="section__inner-container">
+        <div class="canvas-container">
+            <canvas id="canvas-1" data-index="1" width="480" height="360"></canvas>
+            <div class="canvas-controls">
+                <div class="colors">
+                    <button class="hex" data-hex="#034638"></button>
+                </div>
+                <button class="btn-clear" data-index="1">Clear Canvas</button>
+            </div>
+        </div>
+        <div class="real-logo">
+            <button class="btn-reveal" data-index="1">Reveal Logo</button>
+            <img src="images/ivy-icon.png">
+        </div>
+    </div>
+</section>
+
+<section id="set-2">
+    <h2>2. Draw the old Ivy Group logo</h2>
+    <div class="section__inner-container">
+        <div class="canvas-container">
+            <canvas id="canvas-2" data-index="2" width="480" height="360"></canvas>
+            <div class="canvas-controls">
+                <div class="colors">
+                    <button class="hex" data-hex="#1A8C7E"></button>
+                </div>
+                <button class="btn-clear" data-index="2">Clear Canvas</button>
+            </div>
+        </div>
+        <div class="real-logo">
+            <button class="btn-reveal" data-index="2">Reveal Logo</button>
+            <img src="images/leaf-teal-cmyk.png">
+        </div>
+    </div>
+</section>
+
+<section id="set-3">
+    <h2>3. Draw the Global Alliance logo</h2>
+    <div class="section__inner-container">
+        <div class="canvas-container">
+            <canvas id="canvas-3" data-index="3" width="480" height="360"></canvas>
+            <div class="canvas-controls">
+                <div class="colors">
+                    <button class="hex" data-hex="#991e66"></button>
+                    <button class="hex2" data-hex="#da291c"></button>
+                </div>
+                <button class="btn-clear" data-index="3">Clear Canvas</button>
+            </div>
+        </div>
+        <div class="real-logo">
+            <button class="btn-reveal" data-index="3">Reveal Logo</button>
+            <img src="images/GlobalAlliance-icon-800x800-socialprofile.png">
+        </div>
+    </div>
+</section>
+
+<section id="set-4">
+    <h2>4. Draw the Carter Mountain Orchard logo</h2>
+    <div class="section__inner-container">
+        <div class="canvas-container">
+            <canvas id="canvas-4" data-index="4" width="480" height="360"></canvas>
+            <div class="canvas-controls">
+                <div class="colors">
+                    <button class="hex" data-hex="#006B35"></button>
+                    <button class="hex2" data-hex="#78BE20"></button>
+                </div>
+                <button class="btn-clear" data-index="4">Clear Canvas</button>
+            </div>
+        </div>
+        <div class="real-logo">
+            <button class="btn-reveal" data-index="4">Reveal Logo</button>
+            <img src="images/CFO-logo-icon-rgb.png">
+        </div>
+    </div>
+</section>
+
+<section id="set-5">
+    <h2>5. Draw the Clore Furniture logo</h2>
+    <div class="section__inner-container">
+        <div class="canvas-container">
+            <canvas id="canvas-5" data-index="5" width="480" height="360"></canvas>
+            <div class="canvas-controls">
+                <div class="colors">
+                    <button class="hex" data-hex="#004E38"></button>
+                    <button class="hex2" data-hex="#FCF6CC"></button>
+                </div>
+                <button class="btn-clear" data-index="5">Clear Canvas</button>
+            </div>
+        </div>
+        <div class="real-logo">
+            <button class="btn-reveal" data-index="5">Reveal Logo</button>
+            <img src="images/clore-primary-logo.png">
+        </div>
+    </div>
+</section>
+
+<!-- 90s SECTION BEGINS -->
+<h2 class="header-90s"><span>90's Edition</span></h2>
+
+<section id="set-6">
+    <h2>1. Draw the Nickleodeon logo</h2>
+    <div class="section__inner-container">
+        <div class="canvas-container">
+            <canvas id="canvas-6" data-index="6" width="480" height="360"></canvas>
+            <div class="canvas-controls">
+                <div class="colors">
+                    <button class="hex" data-hex="#FF7E00"></button>
+                    <button class="hex2" data-hex="#ffffff"></button>
+                </div>
+                <button class="btn-clear" data-index="6">Clear Canvas</button>
+            </div>
+        </div>
+        <div class="real-logo">
+            <button class="btn-reveal" data-index="6">Reveal Logo</button>
+            <img src="images/90s/nickelodeon-logo.png">
+        </div>
+    </div>
+</section>
+
+<section id="set-7">
+    <h2>2. Draw the All That logo</h2>
+    <div class="section__inner-container">
+        <div class="canvas-container">
+            <canvas id="canvas-7" data-index="7" width="480" height="360"></canvas>
+            <div class="canvas-controls">
+                <div class="colors">
+                    <button class="hex" data-hex="#000000" ></button>
+                    <button class="hex2" data-hex="#F6D20A" ></button>
+                    <button class="hex3" data-hex="#E92926" ></button>
+                </div>
+                <button class="btn-clear" data-index="7">Clear Canvas</button>
+            </div>
+        </div>
+        <div class="real-logo">
+            <button class="btn-reveal" data-index="7">Reveal Logo</button>
+            <img src="images/90s/all-that-logo.svg">
+        </div>
+    </div>
+</section>
+
+<section id="set-8">
+    <h2>3. Draw the Blockbuster logo</h2>
+    <div class="section__inner-container">
+        <div class="canvas-container">
+            <canvas id="canvas-8" data-index="8" width="480" height="360"></canvas>
+            <div class="canvas-controls">
+                <div class="colors">
+                    <button class="hex" data-hex="#353C94"></button>
+                    <button class="hex2" data-hex="#D9CE50"></button>
+                </div>
+                <button class="btn-clear" data-index="8">Clear Canvas</button>
+            </div>
+        </div>
+        <div class="real-logo">
+            <button class="btn-reveal" data-index="8">Reveal Logo</button>
+            <img src="images/90s/blockbuster-logo.png">
+        </div>
+    </div>
+</section>
+
+<section id="set-9">
+    <h2>4. Draw the MTV logo</h2>
+    <div class="section__inner-container">
+        <div class="canvas-container">
+            <canvas id="canvas-9" data-index="9" width="480" height="360"></canvas>
+            <div class="canvas-controls">
+                <div class="colors">
+                    <button class="hex" data-hex="#FBAF14"></button>
+                    <button class="hex2" data-hex="#BE1A20"></button>
+                    <button class="hex3" data-hex="#018BD4"></button>
+                </div>
+                <button class="btn-clear" data-index="9">Clear Canvas</button>
+            </div>
+        </div>
+        <div class="real-logo">
+            <button class="btn-reveal" data-index="9">Reveal Logo</button>
+            <img src="images/90s/mtv-logo.png">
+        </div>
+    </div>
+</section>
+
+<section id="set-10">
+    <h2>5. Draw the Disney Channel logo</h2>
+    <div class="section__inner-container">
+        <div class="canvas-container">
+            <canvas id="canvas-10" data-index="10" width="480" height="360"></canvas>
+            <div class="canvas-controls">
+                <div class="colors">
+                    <button class="hex" data-hex="#2B8FD5"></button>
+                </div>
+                <button class="btn-clear" data-index="10">Clear Canvas</button>
+            </div>
+        </div>
+        <div class="real-logo">
+            <button class="btn-reveal" data-index="10">Reveal Logo</button>
+            <img src="images/90s/disney-channel.png">
+        </div>
+    </div>
+</section>
+
+
+<footer>Made by Landon 😎</footer>
+
+<script src="drawing-game.js"></script>
+</body>
+</html>
