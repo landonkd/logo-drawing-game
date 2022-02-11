@@ -25,6 +25,8 @@ canvases.forEach(canvas => {
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
+let drawX = 0;
+let drawY = 0;
 
 let hexArray = [];
 let selectedHex = '';
@@ -41,7 +43,6 @@ function selectColor() {
     setTimeout(() => {this.classList.remove('animate__bounce')}, 300);
 }
 colorBtn.forEach(btn => btn.addEventListener('click', selectColor));
-//colorBtn[i].addEventListener('click', selectColor);
 
 const clearBtn = document.querySelectorAll('.btn-clear');
 function clearCanvas() {
@@ -57,6 +58,10 @@ function draw(e) {
     if (!isDrawing) return;
 
     let i = this.dataset.index - 1;
+
+    if (e.target == ctx[i].canvas) {
+        e.preventDefault();
+    }
 
     switch (i) {
         case 0: // Ivy Group new
@@ -94,26 +99,66 @@ function draw(e) {
             hexArray = ['#000000']
     }
     hexArray.includes(selectedHex) ? hex = selectedHex : hex = hexArray[0];
+
+    // For Touch Events
+    if (typeof e.touches !== 'undefined') {
+        let touch = e.touches[0];
+        var rect = e.target.getBoundingClientRect();
+        drawX = touch.clientX - rect.left;
+        drawY = touch.clientY - rect.top;
+    }
+    // For Mouse Events
+    else {
+        drawX = e.offsetX;
+        drawY = e.offsetY;
+    }
     
     ctx[i].strokeStyle = `${hex}`;
     ctx[i].beginPath();
     // Start from
     ctx[i].moveTo(lastX, lastY);
     // Go to
-    ctx[i].lineTo(e.offsetX, e.offsetY);
+    ctx[i].lineTo(drawX, drawY);
     ctx[i].stroke();
-    [lastX, lastY] = [e.offsetX, e.offsetY];
+    [lastX, lastY] = [drawX, drawY];
+
+    console.log({'x' : lastX, 'y' : lastY});
 }
 
-
-canvases.forEach(canvas => canvas.addEventListener(('mousedown'), (e) => {
+// Drawing with a mouse
+canvases.forEach(canvas => canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
     [lastX, lastY] = [e.offsetX, e.offsetY];    
 }));
-
-canvases.forEach(canvas => canvas.addEventListener(('mousemove'), draw));
-canvases.forEach(canvas => canvas.addEventListener(('mouseup'), () => isDrawing = false));
+canvases.forEach(canvas => canvas.addEventListener('mousemove', draw));
+canvases.forEach(canvas => canvas.addEventListener('mouseup', () => isDrawing = false));
 canvases.forEach(canvas => canvas.addEventListener(('mouseout'), () => isDrawing = false));
+
+// Drawing with a touch device
+canvases.forEach(canvas => canvas.addEventListener('touchstart', (e) => {
+    if (e.target == canvas) {
+        e.preventDefault();
+    }
+    isDrawing = true;
+    let touch = e.changedTouches[0]
+    let rect = e.target.getBoundingClientRect();
+    drawX = touch.clientX - rect.left;
+    drawY = touch.clientY - rect.top;
+    [lastX, lastY] = [drawX, drawY];
+}));
+canvases.forEach(canvas => canvas.addEventListener('touchmove', draw));
+canvases.forEach(canvas => canvas.addEventListener('touchend', (e) => {
+    if (e.target == canvas) {
+        e.preventDefault();
+    }
+    isDrawing = false;
+}));
+canvases.forEach(canvas => canvas.addEventListener(('touchcancel'), (e) => {
+    if (e.target == canvas) {
+        e.preventDefault();
+    }
+    isDrawing = false;
+}));
 
 
 /*
